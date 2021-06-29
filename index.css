@@ -392,6 +392,7 @@ hr {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.25px;
+  text-align: center;
 }
 
 .footer-container li {
@@ -426,6 +427,10 @@ hr {
 
 .social-icons li {
   padding: 0 1rem;
+}
+
+.attribution {
+  display: none;
 }
 
 /* ---------------------------_MEDIA QUERY_ DESKTOP---------------------- */
@@ -471,7 +476,7 @@ hr {
     color: #9e9aa8;
   }
 
-  .nav-item{
+  .nav-item {
     display: flex;
     align-items: center;
   }
@@ -679,5 +684,14 @@ hr {
 
   .social-icons {
     padding-top: 3rem;
+  }
+
+  .attribution {
+    text-align: center;
+    color: white;
+    background-color: #232127;
+  }
+  .attribution a {
+    text-decoration: none;
   }
 }
