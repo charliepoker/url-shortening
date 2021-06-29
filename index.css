@@ -13,7 +13,7 @@ body {
 }
 
 /* --------------------------------------NAVBAR---------------------------------- */
-#navbarSupportedContent {
+/* #navbarSupportedContent {
   background: #3a3054 !important;
   border-radius: 10px;
   margin-top: 1rem;
@@ -69,7 +69,7 @@ hr {
 
 .container-fluid {
   padding: 0 5% !important;
-}
+} */
 
 /* --------------------------------------MAIN----------------------------------- */
 
@@ -431,13 +431,61 @@ hr {
 /* ---------------------------_MEDIA QUERY_ DESKTOP---------------------- */
 
 @media only screen and (min-width: 1280px) {
-  .navbar {
-    width: 100% !important;
-    display: none !important;
+  .container-fluid {
+    padding: 0 8% !important;
+    display: flex !important;
+    align-items: center;
+    margin-bottom: 3rem !important;
   }
 
-  #navbarSupportedContent {
-    display: none !important;
+  .navbar-brand {
+    padding-right: 2rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    color: #9e9aa8;
+  }
+
+  .nav-item {
+    padding-right: 2rem;
+  }
+
+  .nav-menu-links .navbar-nav {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    color: #9e9aa8;
+    padding-right: 25rem;
+  }
+
+  .login-link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    color: #9e9aa8;
+  }
+
+  .nav-item{
+    display: flex;
+    align-items: center;
+  }
+
+  .btn button {
+    border: none;
+    background: #2bd0d0;
+    border-radius: 1.75rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: #ffffff;
+    padding: 5px 40px !important;
   }
 
   .main-container {
