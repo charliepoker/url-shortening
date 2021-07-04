@@ -133,12 +133,20 @@ hr {
   padding: 1.25rem 0.938rem;
   background: #3a3054;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form small {
   color: #f46363;
   font-style: italic;
   display: none;
+  width: 100%;
+  order: 2;
+}
+
+.form .error {
+  border: 3px solid #f46363;
 }
 
 .form input {
@@ -149,10 +157,7 @@ hr {
   border-radius: 5px;
   border: none;
   height: 3rem;
-}
-
-.form .error {
-  border: 3px solid #f46363;
+  order: 1;
 }
 
 .form input::placeholder {
@@ -178,6 +183,7 @@ hr {
   border: none;
   color: #ffffff;
   padding: 0.625rem 0;
+  order: 3;
 }
 
 .form button:hover {
@@ -534,6 +540,8 @@ hr {
 
   .form {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background: #3a3054;
@@ -548,11 +556,22 @@ hr {
     border: none;
     height: 3rem;
     padding-left: 2rem;
+    order: 1;
+  }
+
+  .form small {
+    color: #f46363;
+    font-style: italic;
+    display: none;
+    width: 100%;
+    order: 3;
+    padding-top: 10px;
   }
 
   .form button {
     margin-top: 0rem;
     width: 20%;
+    order: 2;
   }
 
   .result {
@@ -691,19 +710,6 @@ hr {
   }
 }
 
-/* .showcopied {
-  width: 100%;
-  background: #3a3054;
-  border-radius: 0.313rem;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.688rem;
-  border: none;
-  color: #ffffff;
-  padding: 0.625rem 0;
-} */
-
 .loading {
   display: none;
   position: fixed;
@@ -718,8 +724,6 @@ hr {
   z-index: 999999999999999;
   animation: loading 1s linear infinite;
 }
-
-
 
 @keyframes loading {
   from {

@@ -2,7 +2,7 @@ const input = document.querySelector("#input");
 const btn = document.querySelector("#btn");
 const result = document.querySelector(".result");
 const loader = document.querySelector(".loading");
-
+const small = document.querySelector("small");
 let shortLink;
 
 function shortUrl() {
@@ -22,7 +22,12 @@ function shortUrl() {
       loader.style.display = "none";
     })
     .then(() => displayUrl())
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      loader.style.display = "none";
+      small.textContent = "Service unavailable try again later";
+
+      console.log(err);
+    });
 }
 
 function displayUrl() {
@@ -54,8 +59,15 @@ function displayUrl() {
 
 btn.addEventListener("click", (e) => {
   e.preventDefault();
-  shortUrl();
-  //   displayUrl();
+
+  if (input.value === "") {
+    input.classList.add("error");
+    small.style.display = "block";
+  } else {
+     input.classList.remove("error");
+     
+    shortUrl();
+  }
 });
 
 //SELECT AND COPY TEXT
