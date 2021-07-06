@@ -13,7 +13,7 @@ body {
 }
 
 /* --------------------------------------NAVBAR---------------------------------- */
-/* #navbarSupportedContent {
+#navbarSupportedContent {
   background: #3a3054 !important;
   border-radius: 10px;
   margin-top: 1rem;
@@ -69,7 +69,7 @@ hr {
 
 .container-fluid {
   padding: 0 5% !important;
-} */
+}
 
 /* --------------------------------------MAIN----------------------------------- */
 
@@ -434,61 +434,75 @@ hr {
 /* ---------------------------_MEDIA QUERY_ DESKTOP---------------------- */
 
 @media only screen and (min-width: 1280px) {
+  #navbarSupportedContent {
+    display: none !important;
+  }
+
   .container-fluid {
-    padding: 0 8% !important;
-    display: flex !important;
-    align-items: center;
-    margin-bottom: 3rem !important;
+    padding: 0 5% !important;
   }
 
   .navbar-brand {
-    padding-right: 2rem;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 22px;
-    color: #9e9aa8;
+    display: none;
   }
 
-  .nav-item {
-    padding-right: 2rem;
+  li {
+    list-style: none;
   }
 
-  .nav-menu-links .navbar-nav {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 22px;
-    color: #9e9aa8;
-    padding-right: 25rem;
-  }
-
-  .login-link {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 22px;
-    color: #9e9aa8;
-  }
-
-  .nav-item {
+  .nav-container {
+    padding: 0 8%;
     display: flex;
     align-items: center;
   }
 
-  .btn button {
-    border: none;
-    background: #2bd0d0;
-    border-radius: 1.75rem;
+  .logo {
+    padding-right: 2rem;
+  }
+
+  .first-menu-links1 {
+    margin-right: 26rem;
+  }
+
+  .first-menu-links1 ul {
+    display: flex;
+  }
+
+  .first-menu-links1 ul li {
+    padding-right: 2rem;
+    color: #9e9aa8;
+    margin-top: 18px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .second-menu-links2 ul {
+    display: flex;
+  }
+
+  .second-menu-links2 ul li {
+    padding-right: 3rem;
+    color: #9e9aa8;
+    margin-top: 18px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .second-menu-links2 ul li button {
+    background: #9ae3e3;
+    border-radius: 28px;
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
     line-height: 22px;
     color: #ffffff;
-    padding: 5px 40px !important;
+    padding: 2px 12px;
+    border: none;
   }
 
   .main-container {
